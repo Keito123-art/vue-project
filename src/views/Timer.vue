@@ -16,8 +16,8 @@ const timerInterval = ref(null)
 const tickInterval = ref(null)
 
 // 音效
-const tickSound = new Audio('/click.mp3')
-const completeSound = new Audio('/celebrate.mp3')
+const tickSound = new Audio('/vue-project/click.mp3')
+const completeSound = new Audio('/vue-project/celebrate.mp3')
 tickSound.volume = 0.3
 completeSound.volume = 0.8
 

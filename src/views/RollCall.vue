@@ -24,8 +24,8 @@ const countInput = ref('')
 const namesInput = ref('')
 
 // 音效
-const clickSound = new Audio('/click.mp3')
-const celebrateSound = new Audio('/celebrate.mp3')
+const clickSound = new Audio('/vue-project/click.mp3')
+const celebrateSound = new Audio('/vue-project/celebrate.mp3')
 clickSound.volume = 0.6
 celebrateSound.volume = 0.8
 

@@ -15,8 +15,8 @@ const floatingNumbers = ref([])
 const teamInput = ref(null)
 
 // 音效
-const celebrateSound = new Audio('/celebrate.mp3')
-const hoverSound = new Audio('/hover.mp3')
+const celebrateSound = new Audio('/vue-project/celebrate.mp3')
+const hoverSound = new Audio('/vue-project/hover.mp3')
 celebrateSound.volume = 0.6
 hoverSound.volume = 0.4
 

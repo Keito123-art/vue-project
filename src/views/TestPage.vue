@@ -6,8 +6,8 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 // 1. 音效初始化 (預設瀏覽器會阻止自動播放，但點擊後通常會解鎖)
-const hoverSound = new Audio('/hover.mp3')
-const clickSound = new Audio('/click.mp3')
+const hoverSound = new Audio('/vue-project/hover.mp3')
+const clickSound = new Audio('/vue-project/click.mp3')
 // 調整音量避免太吵
 hoverSound.volume = 0.5
 clickSound.volume = 0.6
