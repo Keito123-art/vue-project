@@ -17,31 +17,29 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # 1. 下载代码
+      # 1. 下載代碼
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. 安装 Node.js (强制使用 v18)
+      # 2. 安裝 Node.js
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # 3. 安装依赖 (指定目录)
+      # 3. 安裝依賴 (修正：刪除 working-directory，直接在根目錄執行)
       - name: Install dependencies
-        working-directory: ./vue-project
         run: npm install
 
-      # 4. 打包 (指定目录)
+      # 4. 打包 (修正：刪除 working-directory，直接在根目錄執行)
       - name: Build
-        working-directory: ./vue-project
         run: npm run build
 
-      # 5. 上传文件 (指定 dist 的路径)
+      # 5. 上傳文件 (修正：路徑直接指向 dist)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./vue-project/dist
+          path: ./dist
 
       # 6. 部署
       - name: Deploy
